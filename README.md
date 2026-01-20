@@ -71,21 +71,6 @@ This project is built using pure, high-performance web technologies, ensuring ma
 
 ---
 
-## 📸 Screenshots
-
-### The Dashboard Hub
-![Dashboard Preview](https://via.placeholder.com/800x400?text=Dashboard+Interface+Preview)
-
-### The "Elite" About Page
-![About Page Preview](https://via.placeholder.com/800x400?text=About+Page+Glassmorphism)
-
-### Media & User Management
-| Media Library | User Management |
-|:---:|:---:|
-| ![Media Library](https://via.placeholder.com/400x200?text=Media+Gallery) | ![Users Table](https://via.placeholder.com/400x200?text=User+Data+Table) |
-
----
-
 ## 🚀 Quick Start
 
 Since this is a static web application, getting started is incredibly simple.
@@ -143,3 +128,29 @@ uhconst-admin-dashboard/
 ├── contact.html           # Contact Support
 ├── logout.html            # Logout Confirmation
 └── README.md              # Documentation
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+<div align="center">
+
+**UHCONST** — Setting the benchmark in construction analytics.
+
+Developed with ❤️ for Builders & Engineers.
+
+</div>
