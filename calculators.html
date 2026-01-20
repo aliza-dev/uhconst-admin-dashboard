@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculators | UNCHOST</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/calculators.css">
+    <style>
+        .calculator-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; padding-bottom: 50px; }
+        .force-link { display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none !important; color: #2d3436 !important; cursor: pointer !important; position: relative; z-index: 10; background: white; border-radius: 16px; padding: 35px 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.03); transition: 0.3s; border: 1px solid transparent; min-height: 200px; }
+        .force-link:hover { transform: translateY(-5px); border-color: #ECB30D; box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+        .calc-icon { font-size: 32px; margin-bottom: 25px; width: 65px; height: 65px; border: 2px solid #2d3436; border-radius: 14px; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+        .force-link:hover .calc-icon { background-color: #ECB30D; border-color: #ECB30D; color: white; }
+        .force-link h3 { font-size: 15px; font-weight: 600; color: #2d3436; margin: 0; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo-area"><i class="ri-hard-hat-fill logo-icon"></i><h2>UHCONST</h2></div>
+            <div class="menu-content">
+                <nav class="nav-group">
+                    <a href="dashboard.html" class="menu-item"><i class="ri-layout-grid-fill"></i> <span>Dashboard</span></a>
+                    <a href="calculators.html" class="menu-item active"><i class="ri-calculator-fill"></i> <span>Calculators</span></a>
+                    <a href="users.html" class="menu-item"><i class="ri-group-fill"></i> <span>Users</span></a>
+                    <a href="seo-meta.html" class="menu-item"><i class="ri-global-line"></i> <span>SEO & Meta</span></a>
+                    <a href="media-library.html" class="menu-item"><i class="ri-image-2-fill"></i> <span>Media Library</span></a>
+                    <a href="faqs.html" class="menu-item"><i class="ri-question-fill"></i> <span>FAQs</span></a>
+                    <div class="menu-divider"></div>
+                    <a href="privacy-policy.html" class="menu-item"><i class="ri-shield-check-fill"></i> <span>Privacy Policy</span></a>
+                    <a href="about.html" class="menu-item"><i class="ri-information-fill"></i> <span>About</span></a>
+                    <a href="contact.html" class="menu-item"><i class="ri-phone-fill"></i> <span>Contact</span></a>
+                    <div class="menu-divider"></div>
+                    <a href="settings.html" class="menu-item"><i class="ri-settings-3-fill"></i> <span>Settings</span></a>
+                </nav>
+            </div>
+            <div class="sidebar-footer"><a href="logout.html" class="menu-item logout"><i class="ri-shut-down-line"></i> <span>Log Out</span></a></div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="header-left"><h1 class="page-title">Calculators</h1></div>
+                <div class="user-actions"><a href="settings.html" class="icon-btn"><i class="ri-settings-3-line"></i></a><div class="profile-pic"><img src="https://ui-avatars.com/api/?name=Admin" alt="User"></div></div>
+            </header>
+
+            <div class="content-body">
+                <div class="calculator-grid">
+                    <a href="calculator-edit.html" class="force-link"><i class="ri-more-2-fill card-menu"></i><div class="calc-icon"><i class="ri-calculator-line"></i></div><h3>Conversion Calculator</h3></a>
+                    <a href="calculator-edit.html" class="force-link"><i class="ri-more-2-fill card-menu"></i><div class="calc-icon"><i class="ri-home-gear-line"></i></div><h3>Construction Cost</h3></a>
+                    <a href="calculator-edit.html" class="force-link"><i class="ri-more-2-fill card-menu"></i><div class="calc-icon"><i class="ri-layout-masonry-line"></i></div><h3>Concrete Quantity</h3></a>
+                    <a href="calculator-edit.html" class="force-link"><i class="ri-more-2-fill card-menu"></i><div class="calc-icon"><i class="ri-ruler-2-line"></i></div><h3>Geo Tech Calculator</h3></a>
+                    <a href="calculator-edit.html" class="force-link"><i class="ri-more-2-fill card-menu"></i><div class="calc-icon"><i class="ri-door-open-line"></i></div><h3>Doors & Windows</h3></a>
+                    <a href="calculator-edit.html" class="force-link"><i class="ri-more-2-fill card-menu"></i><div class="calc-icon"><i class="ri-vip-diamond-line"></i></div><h3>Marble & Granite</h3></a>
+                    <a href="calculator-edit.html" class="force-link"><i class="ri-more-2-fill card-menu"></i><div class="calc-icon"><i class="ri-earth-line"></i></div><h3>Earth Work</h3></a>
+                    <a href="calculator-edit.html" class="force-link"><i class="ri-more-2-fill card-menu"></i><div class="calc-icon"><i class="ri-landscape-line"></i></div><h3>Land Scaping</h3></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

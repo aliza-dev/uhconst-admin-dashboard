@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Calculator | UNCHOST</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/calculator-edit.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo-area"><i class="ri-hard-hat-fill logo-icon"></i><h2>UHCONST</h2></div>
+            <div class="menu-content">
+                <nav class="nav-group">
+                    <a href="dashboard.html" class="menu-item"><i class="ri-layout-grid-fill"></i> <span>Dashboard</span></a>
+                    <a href="calculators.html" class="menu-item active"><i class="ri-calculator-fill"></i> <span>Calculators</span></a>
+                    <a href="users.html" class="menu-item"><i class="ri-group-fill"></i> <span>Users</span></a>
+                    <a href="seo-meta.html" class="menu-item"><i class="ri-global-line"></i> <span>SEO & Meta</span></a>
+                    <a href="#" class="menu-item"><i class="ri-image-2-fill"></i> <span>Media Library</span></a>
+                    <a href="faqs.html" class="menu-item"><i class="ri-question-fill"></i> <span>FAQs</span></a>
+                    <div class="menu-divider"></div>
+                    <a href="#" class="menu-item"><i class="ri-shield-check-fill"></i> <span>Privacy Policy</span></a>
+                    <a href="logout.html" class="menu-item"><i class="ri-shut-down-line"></i> <span>Log Out</span></a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="header-left">
+                    <div class="mobile-toggle" onclick="toggleSidebar()"><i class="ri-menu-line"></i></div>
+                    <h1 class="page-title">Edit Calculator</h1>
+                </div>
+                <div class="user-actions">
+                    <div class="profile-pic"><img src="https://ui-avatars.com/api/?name=Admin" alt="User"></div>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <div class="edit-card" style="background: white; padding: 40px; border-radius: 20px;">
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                        <div style="background: #f4f4f4; height: 150px; border-radius: 15px; border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <span style="color: #666;"><i class="ri-camera-line"></i> Upload Icon</span>
+                        </div>
+                        <div style="background: #f4f4f4; height: 150px; border-radius: 15px; border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <span style="color: #666;"><i class="ri-image-line"></i> Upload Banner</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 10px;">Title</label>
+                        <input type="text" value="Construction Cost Calculator" style="width: 100%; padding: 15px; border-radius: 50px; border: 1px solid #ddd; background: #f9f9f9;">
+                    </div>
+
+                    <div style="display: flex; gap: 20px;">
+                        <a href="calculators.html" style="padding: 12px 40px; border: 1px solid #ECB30D; color: #ECB30D; border-radius: 50px; text-decoration: none; font-weight: 600;">Cancel</a>
+                        
+                        <button style="padding: 12px 40px; background: #ECB30D; color: white; border: none; border-radius: 50px; font-weight: 600; cursor: pointer;">Save</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

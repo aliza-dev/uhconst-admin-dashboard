@@ -1,0 +1,169 @@
+/* =========================================
+   1. GLOBAL SAFETY
+   ========================================= */
+* { box-sizing: border-box; }
+
+/* =========================================
+   2. ACTION BAR
+   ========================================= */
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+/* Search Wrapper (Icon on Right) */
+.search-wrapper {
+    flex: 1;
+    background: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes content apart */
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.search-wrapper input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #2d3436;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-wrapper i {
+    color: #b2bec3;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Add Button */
+.btn-primary {
+    background: #ECB30D;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(236, 179, 13, 0.3);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.btn-primary:hover {
+    background-color: #d4a017;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   3. FAQ CARD & LIST
+   ========================================= */
+.faq-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.03); 
+    width: 100%;
+}
+
+.card-heading {
+    margin: 0 0 25px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2d3436;
+}
+
+/* FAQ Item Styling */
+.faq-item {
+    border-bottom: 1px solid #F4F5F7;
+    margin-bottom: 15px;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* Header (Question + Icon) */
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.question {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2d3436;
+    transition: color 0.3s;
+}
+
+.toggle-icon {
+    font-size: 20px;
+    color: #ECB30D; /* Yellow Icon */
+    transition: transform 0.3s ease;
+}
+
+/* Body (Answer) */
+.faq-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-body p {
+    margin: 0;
+    font-size: 13px;
+    color: #888;
+    line-height: 1.6;
+    padding-bottom: 15px;
+    width: 95%; /* Prevent text from hitting the edge too hard */
+}
+
+/* =========================================
+   4. ACTIVE STATE (EXPANDED)
+   ========================================= */
+.faq-item.active .toggle-icon {
+    transform: rotate(180deg); /* Flip icon up */
+}
+
+.faq-item.active .faq-body {
+    max-height: 150px; /* Opens up */
+    /* Note: If content is very long, increase this value or use JS to set scrollHeight */
+}
+
+.faq-item.active .question {
+    font-weight: 600; /* Bold when active */
+}
+
+/* Hover Effect */
+.faq-header:hover .question {
+    color: #ECB30D;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .action-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .search-wrapper, .btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+    .search-wrapper { justify-content: space-between; }
+}

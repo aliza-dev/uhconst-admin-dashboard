@@ -1,0 +1,195 @@
+/* =========================================
+   1. GLOBAL SAFETY RULE
+   ========================================= */
+* { box-sizing: border-box; }
+
+/* =========================================
+   2. ELITE CARD CONTAINER
+   ========================================= */
+.details-card {
+    background: white;
+    border-radius: 24px;
+    /* Premium Layered Shadow for Depth */
+    box-shadow: 
+        0 10px 40px -10px rgba(0,0,0,0.08),
+        0 2px 10px -2px rgba(0,0,0,0.05);
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================
+   3. HEADER SECTION (ENHANCED)
+   ========================================= */
+.card-header-section {
+    padding: 40px 45px;
+    background: linear-gradient(to bottom, #ffffff, #fbfbfb);
+    border-bottom: 1px solid #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* --- AVATAR FIX (HEAD CUT ISSUE SOLVED) --- */
+.large-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    
+    /* Crucial Fixes */
+    object-fit: cover; 
+    object-position: top center; /* Focuses on the face/top */
+    
+    /* Styling */
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.profile-text h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #2d3436;
+    letter-spacing: -0.5px;
+}
+
+.profile-text p {
+    margin: 6px 0 0 0;
+    font-size: 14px;
+    color: #636e72;
+    font-weight: 500;
+}
+
+/* Header Buttons */
+.header-actions { display: flex; gap: 15px; }
+
+.btn {
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    min-width: 130px;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline {
+    background: white;
+    border: 1.5px solid #ECB30D;
+    color: #ECB30D;
+    box-shadow: 0 2px 10px rgba(236, 179, 13, 0.05);
+}
+.btn-outline:hover { background-color: #FFF8E1; box-shadow: none; }
+
+.btn-primary {
+    background: #ECB30D;
+    border: 1.5px solid #ECB30D;
+    color: white;
+    box-shadow: 0 4px 15px rgba(236, 179, 13, 0.25);
+}
+.btn-primary:hover {
+    background-color: #d4a017;
+    border-color: #d4a017;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   4. FORM SECTION
+   ========================================= */
+.card-body-section {
+    padding: 45px;
+    background-color: white;
+}
+
+.details-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 35px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #2d3436;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* Premium Input Styling */
+.form-input {
+    width: 100%;
+    padding: 15px 25px;
+    background-color: #F8F9FA;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    outline: none;
+    transition: all 0.3s;
+    font-weight: 500;
+    /* Inner Shadow for depth */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.form-input:focus {
+    background-color: white;
+    border-color: #ECB30D;
+    box-shadow: 0 4px 15px rgba(236, 179, 13, 0.15);
+}
+
+/* Disabled Input */
+.disabled-input {
+    background-color: #fff;
+    color: #888;
+    cursor: not-allowed;
+    border: 1px solid #f0f0f0;
+    box-shadow: none;
+}
+
+/* Custom Select Dropdown */
+.select-wrapper { position: relative; width: 100%; }
+.form-input.select { appearance: none; -webkit-appearance: none; cursor: pointer; }
+.select-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2d3436;
+    pointer-events: none;
+    font-size: 18px;
+}
+
+/* =========================================
+   5. RESPONSIVE RULES
+   ========================================= */
+@media (max-width: 768px) {
+    .card-header-section { flex-direction: column; align-items: flex-start; gap: 25px; }
+    .header-actions { width: 100%; justify-content: flex-start; }
+    .details-form { grid-template-columns: 1fr; }
+    .large-avatar { width: 70px; height: 70px; }
+    
+    .btn { width: 100%; }
+}

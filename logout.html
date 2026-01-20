@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout | UNCHOST</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0; padding: 0; font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f8; display: flex; align-items: center; justify-content: center;
+            height: 100vh;
+        }
+        .logout-card {
+            background: white; padding: 50px; border-radius: 20px;
+            text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 400px; width: 100%;
+        }
+        .logout-icon {
+            font-size: 60px; color: #ff4757; margin-bottom: 20px;
+        }
+        h2 { margin: 0 0 10px 0; color: #2d3436; }
+        p { color: #636e72; margin-bottom: 30px; }
+        
+        .btn-group { display: flex; gap: 15px; justify-content: center; }
+        .btn {
+            padding: 12px 30px; border-radius: 50px; font-weight: 600;
+            text-decoration: none; cursor: pointer; transition: 0.3s;
+        }
+        .btn-yes { background: #ff4757; color: white; border: none; }
+        .btn-yes:hover { background: #ff6b81; }
+        
+        .btn-no { background: #dfe6e9; color: #2d3436; border: none; }
+        .btn-no:hover { background: #b2bec3; }
+    </style>
+</head>
+<body>
+
+    <div class="logout-card">
+        <i class="ri-shut-down-line logout-icon"></i>
+        <h2>Are you sure?</h2>
+        <p>Do you really want to log out of the admin panel?</p>
+        
+        <div class="btn-group">
+            <a href="admin-login.html" class="btn btn-yes">Yes, Logout</a>
+            
+            <a href="dashboard.html" class="btn btn-no">No, Stay</a>
+        </div>
+    </div>
+
+</body>
+</html>

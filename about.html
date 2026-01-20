@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | UNCHOST</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+    
+    <style>
+        /* --- GLOBAL ANIMATIONS --- */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .about-wrapper {
+            animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* --- 1. DARK HERO SECTION --- */
+        .elite-hero {
+            background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+            border-radius: 30px;
+            /* FIXED: Bottom padding increased to 220px to create a deep backdrop */
+            padding: 80px 60px 220px 60px; 
+            color: white;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3); /* Stronger shadow */
+            overflow: visible; /* Changed to visible just in case */
+            margin-bottom: 0; 
+            z-index: 1;
+        }
+
+        /* Background Pattern */
+        .elite-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(#ECB30D 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.07;
+            border-radius: 30px;
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #ffffff, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-desc {
+            font-size: 1.2rem;
+            color: #c7cdd6;
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.8;
+            position: relative;
+            z-index: 2;
+            font-weight: 300;
+        }
+
+        /* --- 2. FLOATING WHITE STATS BOX (THE FIX) --- */
+        .glass-stats {
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 45px 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+            /* KEY FIX: Pull it up by 120px to overlap significantly */
+            margin: -120px auto 80px auto; 
+            
+            position: relative;
+            z-index: 10; /* Must be higher than hero */
+            width: 85%;
+            
+            /* KEY FIX: Deep shadow to separate it from the dark background */
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15); 
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        /* Decorative divider lines between stats */
+        .stat-item { text-align: center; position: relative; width: 33%; }
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background: #f0f0f0;
+        }
+
+        .stat-val { 
+            font-size: 3.2rem; 
+            font-weight: 800; 
+            display: block; 
+            line-height: 1;
+            color: #2d3436;
+            margin-bottom: 10px;
+        }
+        
+        /* Gold accent for numbers */
+        .stat-val span { color: #ECB30D; }
+
+        .stat-key { 
+            font-size: 0.85rem; 
+            color: #636e72; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            font-weight: 700;
+        }
+
+        /* --- 3. THREE COLUMN GRID --- */
+        .elite-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-bottom: 70px;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 50px 35px;
+            border-radius: 25px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .feature-box:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(236, 179, 13, 0.15);
+            border-color: #ECB30D;
+        }
+
+        .icon-wrapper {
+            width: 85px; height: 85px;
+            background: #fffbf0;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 35px auto;
+            transition: 0.4s;
+        }
+
+        .feature-box:hover .icon-wrapper {
+            background: #ECB30D;
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 15px 30px rgba(236, 179, 13, 0.3);
+        }
+        
+        .icon-wrapper i {
+            font-size: 36px;
+            color: #ECB30D;
+            transition: 0.4s;
+        }
+        .feature-box:hover .icon-wrapper i { color: white; }
+
+        .feature-box h3 { font-size: 1.5rem; font-weight: 700; color: #2d3436; margin-bottom: 15px; }
+        .feature-box p { color: #636e72; line-height: 1.7; font-size: 1rem; }
+
+        /* --- 4. FOOTER QUOTE --- */
+        .quote-block {
+            background: #fff;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+            text-align: center;
+            position: relative;
+            margin-bottom: 50px;
+            border-bottom: 6px solid #ECB30D;
+        }
+        .quote-icon-large { font-size: 50px; color: #ECB30D; opacity: 0.2; position: absolute; top: 20px; left: 30px; }
+        .quote-text { font-size: 1.4rem; font-style: italic; color: #2d3436; font-weight: 500; margin-bottom: 25px; position: relative; z-index: 2;}
+        .quote-author { display: block; font-size: 1rem; color: #ECB30D; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+
+        /* Responsive Fix */
+        @media (max-width: 1024px) {
+            .glass-stats { width: 95%; padding: 30px; }
+            .stat-item:not(:last-child)::after { display: none; }
+        }
+        @media (max-width: 992px) {
+            .elite-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto;}
+            .glass-stats { flex-direction: column; gap: 40px; margin-top: -50px;}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="logo-area">
+                <i class="ri-hard-hat-fill logo-icon"></i>
+                <h2>UHCONST</h2>
+            </div>
+            <div class="menu-content">
+                <nav class="nav-group">
+                    <a href="dashboard.html" class="menu-item"><i class="ri-layout-grid-fill"></i> <span>Dashboard</span></a>
+                    <a href="calculators.html" class="menu-item"><i class="ri-calculator-fill"></i> <span>Calculators</span></a>
+                    <a href="users.html" class="menu-item"><i class="ri-group-fill"></i> <span>Users</span></a>
+                    <a href="seo-meta.html" class="menu-item"><i class="ri-global-line"></i> <span>SEO & Meta</span></a>
+                    <a href="media-library.html" class="menu-item"><i class="ri-image-2-fill"></i> <span>Media Library</span></a>
+                    <a href="faqs.html" class="menu-item"><i class="ri-question-fill"></i> <span>FAQs</span></a>
+                    <div class="menu-divider"></div>
+                    <a href="privacy-policy.html" class="menu-item"><i class="ri-shield-check-fill"></i> <span>Privacy Policy</span></a>
+                    
+                    <a href="about.html" class="menu-item active"><i class="ri-information-fill"></i> <span>About</span></a>
+                    
+                    <a href="contact.html" class="menu-item"><i class="ri-phone-fill"></i> <span>Contact</span></a>
+                    <div class="menu-divider"></div>
+                    <a href="settings.html" class="menu-item"><i class="ri-settings-3-fill"></i> <span>Settings</span></a>
+                </nav>
+            </div>
+            <div class="sidebar-footer"><a href="logout.html" class="menu-item logout"><i class="ri-shut-down-line"></i> <span>Log Out</span></a></div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="header-left"><h1 class="page-title">About Us</h1></div>
+                <div class="user-actions"><div class="profile-pic"><img src="https://ui-avatars.com/api/?name=Admin" alt="User"></div></div>
+            </header>
+
+            <div class="content-body">
+                <div class="about-wrapper">
+                    
+                    <div class="elite-hero">
+                        <h1 class="hero-title">Redefining Construction.</h1>
+                        <p class="hero-desc">
+                            UHCONST is the digital backbone for modern engineering. We combine algorithmic precision with intuitive design to empower builders worldwide.
+                        </p>
+                    </div>
+
+                    <div class="glass-stats">
+                        <div class="stat-item">
+                            <span class="stat-val">10k<span>+</span></span>
+                            <span class="stat-key">Engineers Trust Us</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-val">50<span>+</span></span>
+                            <span class="stat-key">Tools Available</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-val">100<span>%</span></span>
+                            <span class="stat-key">Uptime Guarantee</span>
+                        </div>
+                    </div>
+
+                    <div class="elite-grid">
+                        <div class="feature-box">
+                            <div class="icon-wrapper"><i class="ri-eye-2-line"></i></div>
+                            <h3>Our Vision</h3>
+                            <p>To digitize every aspect of construction planning, ensuring that no resource is wasted and every project stands the test of time.</p>
+                        </div>
+                        
+                        <div class="feature-box">
+                            <div class="icon-wrapper"><i class="ri-rocket-line"></i></div>
+                            <h3>Our Mission</h3>
+                            <p>Providing construction professionals with instant, accurate, and accessible tools to streamline their daily workflows.</p>
+                        </div>
+
+                        <div class="feature-box">
+                            <div class="icon-wrapper"><i class="ri-shield-star-line"></i></div>
+                            <h3>Core Values</h3>
+                            <p>We are built on the pillars of Precision, Integrity, and Innovation. We don't just write code; we build trust.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-block">
+                        <i class="ri-double-quotes-l quote-icon-large"></i>
+                        <p class="quote-text">"We shape our buildings; thereafter they shape us."</p>
+                        <span class="quote-author">— Winston Churchill</span>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

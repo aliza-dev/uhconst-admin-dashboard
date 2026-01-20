@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | UNCHOST</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <div class="login-wrapper">
+        <div class="login-header">
+            <h1>UNCHOST ADMIN LOGIN</h1>
+        </div>
+
+        <div class="login-card">
+            <div class="card-header">
+                <h3>Please Enter the Details to login your Admin</h3>
+            </div>
+
+            <form id="loginForm" action="dashboard.html">
+                
+                <div class="input-group">
+                    <label for="email">Email address</label>
+                    <div class="input-field">
+                        <input type="email" id="email" placeholder="info@gmail.com" required>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="input-field">
+                        <input type="password" id="password" placeholder="******" required minlength="6">
+                        <i class="fa-solid fa-eye-slash toggle-password" onclick="togglePassword()"></i>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a href="#" class="forgot-link">Forget Password!</a>
+                </div>
+
+                <button type="submit" class="submit-btn">Log In</button>
+            </form> 
+            </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+* { box-sizing: border-box; }
+.edit-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.03); 
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+.input-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+.upload-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+.upload-box {
+    background-color: #EAECEF;
+    border-radius: 16px;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px dashed #d1d8e0;
+    width: 100%;
+}
+.upload-box:hover { background-color: #f1f2f6; border-color: #ECB30D; }
+.upload-trigger {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 12px;
+}
+.icon-circle {
+    font-size: 28px;
+    color: #999;
+    border: 2px solid #999;
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.upload-trigger:hover .icon-circle { border-color: #ECB30D; color: #ECB30D; background-color: white; }
+.form-group { margin-bottom: 40px; width: 100%; }
+.form-input {
+    width: 100%;
+    padding: 14px 25px; 
+    background-color: #F8F9FA;
+    border: 1px solid #E0E0E0;
+    border-radius: 50px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    outline: none;
+    transition: all 0.3s;
+    line-height: 1.5;
+}
+.form-input:focus { background-color: white; border-color: #ECB30D; box-shadow: 0 4px 10px rgba(236, 179, 13, 0.1); }
+.form-actions { display: flex; gap: 15px; width: 100%; }
+.btn {
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    min-width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+}
+.btn-outline { background: transparent; border: 1.5px solid #ECB30D; color: #ECB30D; }
+.btn-outline:hover { background-color: #FFF8E1; }
+.btn-primary { background: #ECB30D; border: 1.5px solid #ECB30D; color: white; box-shadow: 0 4px 15px rgba(236, 179, 13, 0.25); }
+.btn-primary:hover { background-color: #d4a017; transform: translateY(-2px); }

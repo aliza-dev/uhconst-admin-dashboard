@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs | UNCHOST</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/faqs.css">
+    
+    <style>
+        /* Add Button ko Link banaya hai, toh uska design set kar rahe hain */
+        .btn-link-fix {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            color: white !important; /* Text white rahe */
+        }
+        .btn-link-fix:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="logo-area">
+                <i class="ri-hard-hat-fill logo-icon"></i>
+                <h2>UHCONST</h2>
+            </div>
+            <div class="menu-content">
+                <nav class="nav-group">
+                    <a href="dashboard.html" class="menu-item"><i class="ri-layout-grid-fill"></i> <span>Dashboard</span></a>
+                    <a href="calculators.html" class="menu-item"><i class="ri-calculator-fill"></i> <span>Calculators</span></a>
+                    <a href="users.html" class="menu-item"><i class="ri-group-fill"></i> <span>Users</span></a>
+                    <a href="seo-meta.html" class="menu-item"><i class="ri-global-line"></i> <span>SEO & Meta</span></a>
+                    <a href="#" class="menu-item"><i class="ri-image-2-fill"></i> <span>Media Library</span></a>
+                    <a href="faqs.html" class="menu-item active"><i class="ri-question-fill"></i> <span>FAQs</span></a>
+                    <div class="menu-divider"></div>
+                    <a href="#" class="menu-item"><i class="ri-shield-check-fill"></i> <span>Privacy Policy</span></a>
+                    <a href="#" class="menu-item"><i class="ri-information-fill"></i> <span>About</span></a>
+                    <a href="contact.html" class="menu-item"><i class="ri-phone-fill"></i> <span>Contact</span></a>
+                </nav>
+            </div>
+            <div class="sidebar-footer">
+                <a href="admin-login.html" class="menu-item logout">
+                    <i class="ri-shut-down-line"></i> <span>Log Out</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="header-left">
+                    <div class="mobile-toggle" onclick="toggleSidebar()"><i class="ri-menu-line"></i></div>
+                    <h1 class="page-title">FAQs</h1>
+                </div>
+                <div class="user-actions">
+                    <div class="icon-btn"><i class="ri-settings-3-line"></i></div>
+                    <div class="icon-btn"><i class="ri-notification-3-line"></i><span class="dot"></span></div>
+                    <div class="profile-pic">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-body">
+                
+                <div class="action-bar">
+                    <div class="search-wrapper">
+                        <input type="text" placeholder="Search..">
+                        <i class="ri-search-line"></i>
+                    </div>
+                    
+                    <a href="add-faq.html" class="btn btn-primary btn-link-fix">
+                        <i class="ri-add-line"></i> Add FAQs
+                    </a>
+                </div>
+
+                <div class="faq-card">
+                    <h3 class="card-heading">FAQs</h3>
+
+                    <div class="faq-list">
+                        
+                        <div class="faq-item active">
+                            <div class="faq-header">
+                                <span class="question">Loream Ipsm Text ?</span>
+                                <i class="ri-arrow-down-circle-fill toggle-icon"></i>
+                            </div>
+                            <div class="faq-body">
+                                <p>The majority of our global interviews take place in line with local academic calendars, typically August-February the preceding year before our internship program takes place. We recommend applying as early as possible.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item active">
+                            <div class="faq-header">
+                                <span class="question">Loream Ipsm Text ?</span>
+                                <i class="ri-arrow-down-circle-fill toggle-icon"></i>
+                            </div>
+                            <div class="faq-body">
+                                <p>We host interns in many of our hub offices, including San Francisco, Dublin and Singapore. As our program grows, some of our smaller offices will start to host internships; these locations will be listed on our jobs page as they become available.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header">
+                                <span class="question">Loream Ipsm Text ?</span>
+                                <i class="ri-arrow-down-circle-fill toggle-icon"></i>
+                            </div>
+                            <div class="faq-body">
+                                <p>Internships typically last 12-16 weeks depending on your academic calendar and availability.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header">
+                                <span class="question">How are interns placed on teams?</span>
+                                <i class="ri-arrow-down-circle-fill toggle-icon"></i>
+                            </div>
+                            <div class="faq-body">
+                                <p>Teams are assigned based on your skills, interests, and business needs at the time of the internship.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header">
+                                <span class="question">Are interns provided housing?</span>
+                                <i class="ri-arrow-down-circle-fill toggle-icon"></i>
+                            </div>
+                            <div class="faq-body">
+                                <p>Yes, we offer relocation support and housing stipends for eligible interns.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header">
+                                <span class="question">How long are Stripe internships?</span>
+                                <i class="ri-arrow-down-circle-fill toggle-icon"></i>
+                            </div>
+                            <div class="faq-body">
+                                <p>Our internships generally run for 12 weeks during the summer.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header">
+                                <span class="question">How long are Stripe internships?</span>
+                                <i class="ri-arrow-down-circle-fill toggle-icon"></i>
+                            </div>
+                            <div class="faq-body">
+                                <p>Information regarding duration is available on the application page.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header">
+                                <span class="question">How long are Stripe internships?</span>
+                                <i class="ri-arrow-down-circle-fill toggle-icon"></i>
+                            </div>
+                            <div class="faq-body">
+                                <p>Contact support for more specific timeline questions.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const header = item.querySelector('.faq-header');
+                header.addEventListener('click', () => {
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

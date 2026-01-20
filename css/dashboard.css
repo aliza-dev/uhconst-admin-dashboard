@@ -1,0 +1,283 @@
+/* =========================================
+   1. GLOBAL RESET & LAYOUT (Elite Contrast)
+   ========================================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F4F5F7; /* Darker Gray for Contrast */
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #F4F5F7; /* Matches body */
+}
+
+/* =========================================
+   2. SIDEBAR (White & Clean)
+   ========================================= */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #E6E9ED; /* Subtle border */
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    z-index: 1000;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.01); /* Very light shadow */
+}
+
+.logo-area {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    gap: 12px;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.logo-icon {
+    font-size: 28px;
+    color: #ECB30D;
+}
+
+.logo-area h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #2d3436;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.menu-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 15px;
+}
+
+/* Scrollbar Styling */
+.menu-content::-webkit-scrollbar { width: 4px; }
+.menu-content::-webkit-scrollbar-thumb { background: #eee; border-radius: 4px; }
+
+.nav-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-divider {
+    height: 1px;
+    background-color: #f1f2f6;
+    margin: 12px 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #636e72;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.menu-item i {
+    width: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.menu-item:hover {
+    background-color: #FFF8E1;
+    color: #ECB30D;
+    transform: translateX(3px);
+}
+
+.menu-item.active {
+    background-color: #ECB30D;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(236, 179, 13, 0.25);
+}
+
+.sidebar-footer {
+    padding: 20px 15px;
+    border-top: 1px solid #f7f7f7;
+    background: #fff;
+}
+
+.menu-item.logout {
+    color: #d63031;
+    font-weight: 600;
+}
+.menu-item.logout:hover {
+    background-color: #ffeaea;
+}
+
+/* =========================================
+   3. MAIN CONTENT (Distinct Background)
+   ========================================= */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #F4F5F7; /* This separates it from Navbar */
+    padding: 0;
+    position: relative;
+}
+
+/* --- HEADER BAR (Pure White Strip) --- */
+.top-bar {
+    height: 80px;
+    background-color: #ffffff; /* Pure White */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    /* Stronger Shadow for Differentiation */
+    box-shadow: 0 2px 25px rgba(163, 177, 198, 0.12); 
+    flex-shrink: 0;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mobile-toggle {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #2d3436;
+}
+
+.page-title {
+    font-size: 24px;
+    color: #ECB30D;
+    font-style: italic;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-btn {
+    font-size: 20px;
+    color: #2d3436;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.icon-btn:hover { color: #ECB30D; }
+
+.dot {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    width: 6px;
+    height: 6px;
+    background: #ff4757;
+    border-radius: 50%;
+}
+
+.profile-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ECB30D;
+    cursor: pointer;
+}
+
+/* --- Content Body --- */
+.content-body {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.content-body::-webkit-scrollbar { width: 6px; }
+.content-body::-webkit-scrollbar-thumb { background-color: #dcdde1; border-radius: 4px; }
+.content-body::-webkit-scrollbar-track { background: transparent; }
+
+/* =========================================
+   4. CARDS (White on Gray)
+   ========================================= */
+.widgets-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    /* Cards pop out from gray background */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+    border: 1px solid white;
+}
+
+.full-width { grid-column: 1 / -1; }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #2d3436;
+    font-weight: 700;
+}
+
+.sub-text {
+    font-size: 12px;
+    color: #b2bec3;
+    margin: 0 0 5px 0;
+    font-weight: 500;
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+}
+.badge.light { background-color: #FFF8E1; color: #d4a017; }
+.badge:not(.light) { background-color: #f1f2f6; color: #2d3436; }
+
+/* Chart Containers */
+.chart-box { position: relative; height: 250px; width: 100%; }
+.chart-box.large { height: 300px; }
+.doughnut-wrapper { display: flex; align-items: center; height: 220px; }
+.chart-half { width: 50%; height: 100%; position: relative; }
+.legend-half { width: 50%; padding-left: 20px; display: flex; flex-direction: column; gap: 12px; }
+.legend-item { display: flex; justify-content: space-between; font-size: 12px; color: #2d3436; font-weight: 600; }
+.legend-left { display: flex; align-items: center; gap: 8px; }
+.legend-color { width: 10px; height: 10px; border-radius: 50%; }
+.legend-percent { color: #b2bec3; font-weight: 400; }
+
+@media (max-width: 992px) {
+    .widgets-grid { grid-template-columns: 1fr; }
+    .sidebar { position: fixed; left: -260px; }
+    .sidebar.active { left: 0; }
+    .mobile-toggle { display: block; }
+}

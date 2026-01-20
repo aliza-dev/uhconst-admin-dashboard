@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Library | UNCHOST</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+    
+    <style>
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Increased size */
+            gap: 25px;
+        }
+        .media-item {
+            height: 200px; /* Increased height */
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s all ease;
+            cursor: pointer;
+            position: relative;
+        }
+        .media-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .media-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s transform;
+        }
+        .media-item:hover img {
+            transform: scale(1.05);
+        }
+        /* Upload box style */
+        .upload-box {
+            background: #f8f9fa;
+            border: 2px dashed #ECB30D;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #ECB30D;
+        }
+        .upload-box i {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .upload-btn {
+            background: #ECB30D; color: white; padding: 12px 25px; border-radius: 50px;
+            border: none; cursor: pointer; display: flex; align-items: center; gap: 10px; font-weight: 600;
+            font-size: 14px;
+        }
+        .upload-btn:hover {
+            background: #d4a00a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="logo-area"><i class="ri-hard-hat-fill logo-icon"></i><h2>UHCONST</h2></div>
+            <div class="menu-content">
+                <nav class="nav-group">
+                    <a href="dashboard.html" class="menu-item"><i class="ri-layout-grid-fill"></i> <span>Dashboard</span></a>
+                    <a href="calculators.html" class="menu-item"><i class="ri-calculator-fill"></i> <span>Calculators</span></a>
+                    <a href="users.html" class="menu-item"><i class="ri-group-fill"></i> <span>Users</span></a>
+                    <a href="seo-meta.html" class="menu-item"><i class="ri-global-line"></i> <span>SEO & Meta</span></a>
+                    
+                    <a href="media-library.html" class="menu-item active"><i class="ri-image-2-fill"></i> <span>Media Library</span></a>
+                    
+                    <a href="faqs.html" class="menu-item"><i class="ri-question-fill"></i> <span>FAQs</span></a>
+                    <div class="menu-divider"></div>
+                    <a href="privacy-policy.html" class="menu-item"><i class="ri-shield-check-fill"></i> <span>Privacy Policy</span></a>
+                    <a href="about.html" class="menu-item"><i class="ri-information-fill"></i> <span>About</span></a>
+                    <a href="contact.html" class="menu-item"><i class="ri-phone-fill"></i> <span>Contact</span></a>
+                    <div class="menu-divider"></div>
+                    <a href="settings.html" class="menu-item"><i class="ri-settings-3-fill"></i> <span>Settings</span></a>
+                </nav>
+            </div>
+            <div class="sidebar-footer"><a href="logout.html" class="menu-item logout"><i class="ri-shut-down-line"></i> <span>Log Out</span></a></div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="header-left">
+                    <div class="mobile-toggle" onclick="toggleSidebar()"><i class="ri-menu-line"></i></div>
+                    <h1 class="page-title">Media Library</h1>
+                </div>
+                <div class="user-actions">
+                    <div class="profile-pic"><img src="https://ui-avatars.com/api/?name=Admin" alt="User"></div>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <div class="action-bar" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                    <h3 style="margin: 0; color: #2d3436;">Project Gallery</h3>
+                    <button class="upload-btn"><i class="ri-upload-cloud-2-fill"></i> Upload New Media</button>
+                </div>
+
+                <div class="media-grid">
+                    <div class="media-item upload-box">
+                        <i class="ri-add-circle-fill"></i>
+                        <span>Add Image</span>
+                    </div>
+
+                    <div class="media-item">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80" alt="Building Construction">
+                    </div>
+                    <div class="media-item">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Crane & Skyscraper">
+                    </div>
+                    <div class="media-item">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Industrial Site">
+                    </div>
+                    <div class="media-item">
+                        <img src="https://images.unsplash.com/photo-1590649880765-91b1956b8276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Architectural Blueprint">
+                    </div>
+                    <div class="media-item">
+                        <img src="https://images.unsplash.com/photo-1535732820275-9ffd998cac22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Engineer with Helmet">
+                    </div>
+                     <div class="media-item">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Construction Tools">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

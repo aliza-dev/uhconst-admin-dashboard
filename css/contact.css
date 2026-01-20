@@ -1,0 +1,251 @@
+/* =========================================
+   1. GLOBAL SAFETY
+   ========================================= */
+* { box-sizing: border-box; }
+
+/* =========================================
+   2. ACTION BAR
+   ========================================= */
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+/* Search Wrapper (Left Side) */
+.search-wrapper {
+    flex: 1;
+    background: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.search-wrapper i {
+    color: #b2bec3;
+    font-size: 18px;
+}
+
+.search-wrapper input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #2d3436;
+    font-family: 'Poppins', sans-serif;
+    background: transparent;
+}
+
+/* Search Button (Right Side) */
+.btn-primary {
+    background: #ECB30D;
+    border: none;
+    color: white;
+    padding: 12px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 15px rgba(236, 179, 13, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d4a017;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   3. CONTACT CARD CONTAINER
+   ========================================= */
+.contact-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.03); 
+    width: 100%;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* =========================================
+   4. TABLE STYLING
+   ========================================= */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.custom-table thead th {
+    text-align: left;
+    padding: 15px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #2d3436;
+    border-bottom: 1px solid #f1f2f6;
+    text-transform: capitalize;
+}
+
+.custom-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+.custom-table tbody td {
+    padding: 15px 10px;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #2d3436;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+/* User Info */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f1f2f6;
+}
+
+.user-name { font-weight: 600; color: #2d3436; }
+.text-gray { color: #636e72; font-size: 13px; font-weight: 400; }
+.text-right { text-align: right; }
+
+/* =========================================
+   5. ACTION ICONS & TOOLTIP (ELITE FEATURE)
+   ========================================= */
+.action-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-wrapper {
+    position: relative; /* Anchor for tooltip */
+    display: flex;
+    align-items: center;
+}
+
+.action-icons i {
+    font-size: 20px;
+    cursor: pointer;
+    color: #b2bec3;
+    transition: all 0.2s;
+}
+
+.icon-msg:hover { color: #2d3436; }
+.icon-delete:hover { color: #d63031; }
+
+/* Active/Hover State for Tooltip */
+.tooltip-active .icon-msg {
+    color: #2d3436; /* Dark active state */
+}
+
+/* THE MESSAGE BUBBLE */
+.msg-tooltip {
+    /* Hide by default (remove 'display:none' if implementing hover) */
+    /* display: none; */ 
+    
+    position: absolute;
+    right: 35px; /* Push to left of icon */
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 200px;
+    background-color: #f8f8f8;
+    padding: 12px;
+    border-radius: 8px 8px 0 8px; /* Speech bubble shape */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    
+    font-size: 11px;
+    color: #555;
+    line-height: 1.5;
+    z-index: 10;
+    pointer-events: none; /* Let clicks pass through */
+    
+    /* Animation */
+    opacity: 0; 
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Show Tooltip on Hover */
+.icon-wrapper:hover .msg-tooltip,
+.tooltip-active .msg-tooltip {
+    opacity: 1;
+    visibility: visible;
+    right: 40px; /* Slight slide animation */
+}
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #f9f9f9;
+    margin-top: 10px;
+}
+
+.showing-text {
+    font-size: 12px;
+    color: #b2bec3;
+    font-weight: 500;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-link {
+    font-size: 12px;
+    font-weight: 600;
+    color: #636e72;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.page-link:hover:not(.disabled) {
+    background-color: #f1f2f6;
+    color: #2d3436;
+}
+
+.page-link.active {
+    background-color: #ECB30D;
+    color: white;
+    box-shadow: 0 2px 8px rgba(236, 179, 13, 0.3);
+}
+
+.page-link.disabled { color: #dfe6e9; cursor: default; }
+
+@media (max-width: 768px) {
+    .action-bar { flex-direction: column; }
+    .table-footer { flex-direction: column; gap: 15px; }
+    .msg-tooltip { display: none; } /* Hide complicated tooltip on mobile */
+}

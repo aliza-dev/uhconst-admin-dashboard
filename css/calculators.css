@@ -1,0 +1,99 @@
+/* ACTION BAR */
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+.search-wrapper {
+    flex: 1;
+    background: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+.search-wrapper i { color: #b2bec3; font-size: 18px; }
+.search-wrapper input {
+    border: none; outline: none; width: 100%;
+    font-size: 14px; color: #2d3436; font-family: 'Poppins', sans-serif;
+}
+.primary-btn {
+    background-color: #ECB30D;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* GRID */
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+    gap: 25px;
+    padding-bottom: 30px;
+}
+
+/* CARD (Is bar simple rakha hai) */
+.calc-card {
+    background: white;
+    border-radius: 16px;
+    padding: 35px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    
+    /* Yaha properties repeat ki hain safety ke liye */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.calc-card:hover {
+    transform: translateY(-5px);
+    border-color: #ECB30D;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.calc-icon {
+    font-size: 32px;
+    color: #2d3436;
+    margin-bottom: 25px;
+    width: 65px;
+    height: 65px;
+    border: 2px solid #2d3436;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.calc-card:hover .calc-icon {
+    background-color: #ECB30D;
+    border-color: #ECB30D;
+    color: white;
+}
+
+.calc-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2d3436;
+    margin: 0;
+}
